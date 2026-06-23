@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<name>northlands-elements</name>
+		<description>Supplements from northlands-elements RPG 5E to expand your core gaming elements.</description>
+		<author url="https://koboldpress.com/">Kobold Press</author>
+		<update version="0.0.20">
+			<file name="northlands-elements.index" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/northlands.index" />
+		</update>
+	</info>
+	<files>
+		<file name="source.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/source.xml" />
+
+	</files>
+</index>

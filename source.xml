@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="source.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/source.xml" />
+		</update>
+	</info>
+	<element name="Northlands" type="Source" source="Core" id="ID_KBP_NORTHLANDS">
+		<description>
+			<p><strong>Dragonships carve through icy seas, mighty heroes share the hearth with cunning gods, and everywhere the song of battle thunders—welcome to the Northlands!</strong></p>
+            <ul>
+                <li> Play 8 new subclasses, including the Nornbound Cleric or Trickster Warlock, and 5 new species, including giantkin and bearfolk.</li>
+                <li> Unleash new 50 monsters, 9 new factions, and over 80 new weapons, spells, and magic items.</li>
+                <li> Adventure into fully realized drop-in locations, including the Realm of Bears, the Kingdoms of the Giants, and more.</li>
+                <li> Sail to new lands or win fame with new rules for sailing, ship combat, rune magic, fate, and earning a reputation.</li>
+            </ul>
+        </description>
+		<setters>
+			<set name="abbreviation">NL</set>
+			<set name="url">https://koboldpress.com/kpstore/product/northlands-worldbook-5-5e-dd/</set>
+			<set name="image">https://koboldpress.com/kpstore/wp-content/uploads/Worldbook-Cover-scaled.jpg</set>
+            <set name="author" abbreviation="KBP" url="https://koboldpress.com/">Kobold Press</set>
+			<set name="third-party">true</set>
+			<set name="release">2026</set>
+		</setters>
+	</element>
+</elements>
