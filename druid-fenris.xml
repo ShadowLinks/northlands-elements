@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name></name>
+        <update version="0.0.1">
+            <file name="druid-fenris.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/druid-fenris.xml" />
+        </update>
+    </info>
+    <element name="Circle of Fenris" type="Archetype" source="Northlands (2024)"  id="ID_KPB_NL_ARCHETYPE_DRUID_FENRIS">
+        <supports>Druid Subclass</supports>
+        <description>
+            <p class="flavor">Savage Devotee of the Great Wo</p>
+            <p>The bitter Northlands hold many dark groups and secrets. One of the most dangerous is the Circle of Fenris, a circle of Druids who venerate the Great Wolf. Inspired by the strength and tenacity of Fenris, these Druids feel a kinship to the wolf through their ties to the natural world. Despite their unsavory reputation in the North, not all Circle of Fenris Druids are savage killers or nihilists seeking to end the world. Some merely resent so-called progress, while others throw off the trappings of civilization to embrace the single-mindedness of the predator. Regardless, Circle of Fenris Druids are known for their untamed nature and unbridled enthusiasm for the hunt.</p>
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_DRUID_FENRIS_MANTLE_OF_THE_WOLF" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_DRUID_FENRIS_IMPROVED_MANTLE" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_DRUID_FENRIS_DEFEND_THE_PACK" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_DRUID_FENRIS_CHILDREN_OF_THE_GREAT_WOLF" />
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_DRUID_FENRIS_MANTLE_OF_THE_WOLF" level="3" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_DRUID_FENRIS_IMPROVED_MANTLE" level="6" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_DRUID_FENRIS_DEFEND_THE_PACK" level="10" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_DRUID_FENRIS_CHILDREN_OF_THE_GREAT_WOLF" level="14" />
+
+        </rules>
+    </element>
+    <element name="Level 3: Mantle of the Wolf" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_DRUID_FENRIS_MANTLE_OF_THE_WOLF">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_MANTLE_OF_THE_WOLF</requirements>
+        <description>
+            <p>You can manifest a tiny portion of Fenris’s power within you. As an action, you can expend a single use of your Wild Shape to cause an ephemeral wolf's head, blazing with primal power, to appear above your own for 10 minutes. It ends early if you dismiss it (no action required), manifest it again, or have the Incapacitated condition.</p>
+            <p class="indent">While this mantle surrounds your body, you are filled with fierce primordial rage. You gain a bonus to your Strength (Athletics) checks and Strength saving throws equal to your Wisdom modifier (minimum of 1). Additionally, you can replace one of your melee attacks with a special bite attack using the spectral head. This bite uses your Wisdom modifier instead of Strength for the attack rolls, and it deals 1d8 + your Wisdom modifier Force damage on a successful hit.</p>
+        </description>
+        <sheet alt="Mantle of the Wolf" action="Action" usage ="Wild Shape">
+            <description>As an action, you can expend a single use of your Wild Shape to cause an ephemeral wolf's head, blazing with primal power, to appear above your own for 10 minutes. It ends early if you dismiss it (no action required), manifest it again, or have the Incapacitated condition.
+            You gain a +{{wisdom:Modifier}} bonus to your Athletics checks and STR saving throws (minimum of 1). Additionally, you can replace one of your melee attacks with a special bite attack using the spectral head. This bite uses your Wisdom modifier instead of Strength for the attack rolls, and it deals 1d8 + {{wisdom:modifier}} Force damage on a successful hit.</description>
+        </sheet>
+    </element>
+    <element name="Level 6: Improved Mantle" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_DRUID_FENRIS_IMPROVED_MANTLE">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_DRUID_FENRIS_IMPROVED_MANTLE</requirements>
+        <description>
+            <p>While your Mantle of the Wolf surrounds your body, you gain the following benefits.</p>
+            <p class="indent"><strong>Break the Chain.</strong> Bite attacks you make with spectral wolf head deal double damage to objects and structures, ignoring the damage threshold of these targets.</p>
+            <p class="indent"><strong>Dark Sight.</strong> You have Darkvision out to 60 feet. If you already have Darkvision, its range increases by 30 feet.</p>
+            <p class="indent"><strong>Wolf ’s Sprint.</strong> Your Speed increases by 10 feet.</p>
+        </description>
+        <sheet alt="Improved Mantle">
+            <description>While your Mantle of the Wolf surrounds your body, you gain the following benefits.
+            Break the Chain. Bite attacks you make with spectral wolf head deal double damage to objects and structures, ignoring the damage threshold of these targets.
+            Dark Sight. You have Darkvision out to 60 feet. If you already have Darkvision, its range increases by 30 feet.
+            Wolf ’s Sprint. Your Speed increases by 10 feet.</description>
+        </sheet>
+    </element>
+    <element name="Level 10: Defend the Pack" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_DRUID_FENRIS_DEFEND_THE_PACK">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_DRUID_FENRIS_DEFEND_THE_PACK</requirements>
+        <description>
+            <p>Whenever a creature attacks an ally within 30 feet of you, you can use your Reaction and spend a use of your Wild Shape to conjure a giant phantom wolf to maul that creature. There is no attack roll required, and the creature is not entitled to a saving throw. The target takes 4d8 Force damage and has the Prone condition.</p>
+            <p class="indent">At 14th level, the damage increases to 6d8 Force damage.</p>
+        </description>
+        <sheet alt="Defend the Pack" action="Reaction" usage ="Wild Shape">
+            <description>Whenever a creature attacks an ally within 30 feet of you, you can use your Reaction and spend a use of your Wild Shape to conjure a giant phantom wolf to maul that creature. There is no attack roll required, and the creature is not entitled to a saving throw. The target takes 4d8 Force damage and has the Prone condition.</description>
+            <description level="14">Whenever a creature attacks an ally within 30 feet of you, you can use your Reaction and spend a use of your Wild Shape to conjure a giant phantom wolf to maul that creature. There is no attack roll required, and the creature is not entitled to a saving throw. The target takes 8d8 Force damage and has the Prone condition.</description>
+        </sheet>
+    </element>
+    <element name="Level 14: Children of the Great Wolf" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_DRUID_FENRIS_CHILDREN_OF_THE_GREAT_WOLF">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_DRUID_FENRIS_CHILDREN_OF_THE_GREAT_WOLF</requirements>
+        <description>
+            <p>Once per day, when you use your action to take on your Mantle of the Wolf, you can also summon a fenrikyn (see Chapter 8). You can telepathically order it to follow your commands (no action required). The fenrikyn is loyal to you and your allies. It lasts for as long as your Mantle of the Wolf lasts, until you dismiss it (no action required), it’s destroyed, you travel to another plane, you’re killed, you have the Unconscious condition, or it’s more than 120 feet from you.</p>
+        </description>
+        <sheet alt="Children of the Great Wolf">
+            <description>Once per day, when you use your action to take on your Mantle of the Wolf, you can also summon a fenrikyn. You can telepathically order it to follow your commands (no action required). The fenrikyn is loyal to you and your allies. It lasts for as long as your Mantle of the Wolf lasts, until you dismiss it (no action required), it’s destroyed, you travel to another plane, you’re killed, you have the Unconscious condition, or it’s more than 120 feet from you.</description>
+        </sheet>
+        <rules>
+            <select type="Companion" name="Fenrikyn Companion" number="1" supports="COMPANION-FENRIKYN" />
+        </rules>
+    </element>
+    <element name="Fenrikyn" type="Companion" source="Northlands (2024)" id="ID_KP_NL_COMPANION_FENRIKYN">
+        <supports>COMPANION-FENRIKYN</supports>
+        <description>
+            <p>Fenrikyn are warped worgs and winter wolves, altered by the influence of Fenris, the Great Wolf. Fenrikyn roam the cold forests and the hills of the Northlands, devouring all that they encounter. Generally solitary, fenrikyn have been known to gather into small packs or to take over a pack of wolves or worgs. Though they despise most living things, they reserve their greatest enmity for good-aligned canines and followers of the god Tyr.</p>
+        </description>
+        <setters>
+            <set name="size">Large</set>
+            <set name="type">Monstrosity</set>
+            <set name="alignment">Neutral Evil</set>
+            <set name="ac">15</set>
+            <set name="hp">127 (15d10 + 45)</set>
+            <set name="speed">50 ft.</set>
+            <set name="strength">21</set>
+            <set name="dexterity">14</set>
+            <set name="constitution">16</set>
+            <set name="intelligence">7</set>
+            <set name="wisdom">14</set>
+            <set name="charisma">7</set>
+            <set name="immunities">Cold</set>
+            <set name="conditionImmunities">Frightened</set>            
+            <set name="senses">passive Perception 18, Darkvision 90ft.</set>
+            <set name="languages">Understands Abyssal and Giant but can’t speak</set>
+            <set name="challenge">6</set>
+            <set name="traits">ID_KP_NL_COMPANION_TRAIT_FENRIKYN_MYSTICAL_CHAIN</set>
+            <set name="actions">ID_KP_NL_COMPANION_ACTION_FENRIKYN_MULTIATTACK,ID_KP_NL_COMPANION_ACTION_FENRIKYN_BITE,ID_KP_NL_COMPANION_ACTION_FENRIKYN_CHAIN</set>
+        </setters>
+        <rules>
+            <stat name="companion:ac" value="15" />
+            <stat name="companion:hp:max" value="127" bonus="base" />
+            <stat name="companion:speed" value="50" bonus="base" />
+        </rules>
+    </element>
+    
+    <element name="Mystical Chain" type="Companion Trait" source="Northlands (2024)" id="ID_KP_NL_COMPANION_TRAIT_FENRIKYN_MYSTICAL_CHAIN">
+        <description>
+            <p>The mystical chain attached to the fenrikyn is its greatest weakness and can be severed by an attack dealing 20 Slashing damage against AC 17, which deals no damage to the fenrikyn. If the fenrikyn’s chain is destroyed, it takes 18 (4d8) Psychic damage and has the Stunned condition until the end of its next turn. It also loses its Chain Attack action, Whirling Chain action, and Deflecting Chain Reaction.</p>
+        </description>
+        <sheet>
+            <description>The mystical chain attached to the fenrikyn is its greatest weakness and can be severed by an attack dealing 20 Slashing damage against AC 17, which deals no damage to the fenrikyn. If the fenrikyn’s chain is destroyed, it takes 18 (4d8) Psychic damage and has the Stunned condition until the end of its next turn. It also loses its Chain Attack action, Whirling Chain action, and Deflecting Chain Reaction.</description>
+        </sheet>
+    </element>
+    <element name="Multiattack" type="Companion Action" source="Northlands (2024)" id="ID_KP_NL_COMPANION_ACTION_FENRIKYN_MULTIATTACK">
+        <description>
+            <p>The fenrikyn makes one Bite attack and one Chain attack. If its Mystical Chain has been broken, it instead makes two Bite attacks.</p>
+        </description>
+        <sheet>
+            <description>The fenrikyn makes one Bite attack and one Chain attack. If its Mystical Chain has been broken, it instead makes two Bite attacks.</description>
+        </sheet>
+    </element>
+    <element name="Bite" type="Companion Action" source="Northlands (2024)" id="ID_KP_NL_COMPANION_ACTION_FENRIKYN_BITE">
+        <description>
+            <p><i>Melee Weapon Attack:</i> +8 to hit, reach 5 ft., one target. <i>Hit:</i> 14 (2d8+5) slashing damage.</p>
+        </description>
+        <sheet>
+            <description>Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 14 (2d8+5) slashing damage.</description>
+        </sheet>
+    </element>
+    <element name="Chain" type="Companion Action" source="Northlands (2024)" id="ID_KP_NL_COMPANION_ACTION_FENRIKYN_CHAIN">
+        <description>
+            <p><i>Melee Weapon Attack:</i> +8 to hit, reach 20 ft., one target. <i>Hit:</i> 12 (2d6+5) bludgeoning damage. If the target is a Medium or smaller creature, it has the Grapple condition (escape DC 16). While grappled, the target cannot move further than 20 feet from the fenrikyn, and its Speed is reduced by 10 feet</p>
+        </description>
+        <sheet>
+            <description>Melee Weapon Attack: +8 to hit, reach 20 ft., one target. Hit: 12 (2d6+5) bludgeoning damage. If the target is a Medium or smaller creature, it has the Grapple condition (escape DC 16). While grappled, the target cannot move further than 20 feet from the fenrikyn, and its Speed is reduced by 10 feet</description>
+        </sheet>
+    </element>
+    
+    <element name="Mantle of the Wolf Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_MANTLE_OF_THE_WOLF"/>
+    <element name="Improved Mantle Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_DRUID_FENRIS_IMPROVED_MANTLE"/>
+    <element name="Defend the Pack Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_DRUID_FENRIS_DEFEND_THE_PACK"/>
+    <element name="Children of the Great Wolf Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_DRUID_FENRIS_CHILDREN_OF_THE_GREAT_WOLF"/>
+</elements>
