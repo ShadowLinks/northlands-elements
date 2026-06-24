@@ -5,7 +5,7 @@
 			<file name="source.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/source.xml" />
 		</update>
 	</info>
-	<element name="Northlands" type="Source" source="Core" id="ID_KBP_NORTHLANDS">
+	<element name="Northlands (2024)" type="Source" source="Core" id="ID_KBP_NORTHLANDS_2024">
 		<description>
 			<p><strong>Dragonships carve through icy seas, mighty heroes share the hearth with cunning gods, and everywhere the song of battle thunders—welcome to the Northlands!</strong></p>
             <ul>

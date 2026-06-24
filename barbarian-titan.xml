@@ -6,7 +6,7 @@
             <file name="barbarian-titan.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/source.xml" />
         </update>
     </info>
-    <element name="Path of the Titan" type="Archetype" source="Northlands" id="ID_KPB_NL_ARCHETYPE_BARBARIAN_TITAN">
+    <element name="Path of the Titan" type="Archetype" source="Northlands (2024)"  id="ID_KPB_NL_ARCHETYPE_BARBARIAN_TITAN">
         <supports>Barbarian Subclass</supports>
         <description>
             <p class="flavor">Bigger is Better</p>
@@ -27,7 +27,7 @@
 
         </rules>
     </element>
-    <element name="Level 3: Rage of the Giants" type="Archetype Feature" source="Northlands" id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_RAGE_OF_THE_GIANTS">
+    <element name="Level 3: Rage of the Giants" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_RAGE_OF_THE_GIANTS">
         <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_RAGE_OF_THE_GIANTS</requirements>
         <description>
             <p>Your Rage taps into the primal power of giants. Whenever you activate your Rage, if you are smaller than Large, you can choose to become Large. Your equipment grows to match your new size. If there is not enough room for you to become Large, you do not grow.</p>
@@ -37,7 +37,7 @@
             <description>You can choose to grow to large size when you activate Rage if there is enough room. Large size grants 2x carrying capacity, advantage on STR checks and throws, and weapon attacks and unarmed strikes deal and additional damage die.</description>
         </sheet>
     </element>
-    <element name="Level 6: Crushing Steps" type="Archetype Feature" source="Northlands" id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_CRUSHING_STEPS">
+    <element name="Level 6: Crushing Steps" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_CRUSHING_STEPS">
         <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_TITAN_CRUSHING_STEPS</requirements>
         <description>
             <p>As part of your movement, you can move through the space of any creature with a size smaller than you. An enemy whose space you move through must succeed on a Strength saving throw (DC 8 plus your Strength modifier and Proficiency Bonus) or have the Prone condition and lose the ability to take Reactions until the start of its next turn.</p>
@@ -51,7 +51,7 @@
             <stat name="crushing-steps:dc" value="strength:modifier" />
         </rules>
     </element>
-    <element name="Level 10: Titanic Strikes" type="Archetype Feature" source="Northlands" id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_TITANIC_STRIKES">
+    <element name="Level 10: Titanic Strikes" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_TITANIC_STRIKES">
         <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_TITAN_TITANIC_STRIKES</requirements>
         <description>
             <p>When you use your Brutal Strike feature, the distance the target is pushed by your Forceful Blow is doubled, and the Speed of a target struck by your Hamstring Blow is reduced to 0 until the start of your next turn.</p>
@@ -60,7 +60,7 @@
             <description>When you use your Brutal Strike feature, the distance the target is pushed by your Forceful Blow is doubled, and the Speed of a target struck by your Hamstring Blow is reduced to 0 until the start of your next turn.</description>
         </sheet>
     </element>
-    <element name="Level 14: Rage of the Titans" type="Archetype Feature" source="Northlands" id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_RAGE_OF_THE_TITANS">
+    <element name="Level 14: Rage of the Titans" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_RAGE_OF_THE_TITANS">
         <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_TITAN_RAGE_OF_THE_TITANS</requirements>
         <description>
             <p>Whenever you activate your Rage, if you are smaller than Huge, you can choose to become Huge. Your equipment grows to match your new size. If there is not enough room for you to become Huge, you become Large. If there is not enough room for you to become Large, you do not grow.</p>
