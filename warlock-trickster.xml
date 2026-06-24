@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name></name>
+        <update version="0.0.1">
+            <file name="bard-skald.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/bard-skald.xml" />
+        </update>
+    </info>
+    <element name="Skald" type="Archetype" source="Northlands (2024)"  id="ID_KPB_NL_ARCHETYPE_BARD_SKALD">
+        <supports>Bard Subclass</supports>
+        <description>
+            <p class="flavor"></p>
+            <p></p>
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT1" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT2" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT3" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT4" />
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT1" level="3" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT2" level="6" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT3" level="10" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT4" level="14" />
+
+        </rules>
+    </element>
+    <element name="Level 3: Feat 1" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT1">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_FEAT1</requirements>
+        <description>
+            <p></p>
+        </description>
+        <sheet alt="Feat 1">
+            <description></description>
+        </sheet>
+    </element>
+    <element name="Level 6: Feat 2" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT2">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT2</requirements>
+        <description>
+            <p></p>
+        </description>
+        <sheet alt="Feat 2">
+            <description></description>
+        </sheet>
+        <rules>
+            <stat name="crushing-steps:dc" value="8" bonus="base" />
+            <stat name="crushing-steps:dc" value="proficiency" />
+            <stat name="crushing-steps:dc" value="strength:modifier" />
+        </rules>
+    </element>
+    <element name="Level 10: Feat 3" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT3">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT3</requirements>
+        <description>
+            <p></p>
+        </description>
+        <sheet alt="Feat 3">
+            <description></description>
+        </sheet>
+    </element>
+    <element name="Level 14: Feat 4" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT4">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT4</requirements>
+        <description>
+            <p></p>
+        </description>
+        <sheet alt="Feat 4">
+            <description></description>
+        </sheet>
+    </element>
+    
+    <element name="Feat 1 Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_FEAT1"/>
+    <element name="Feat 2 Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT2"/>
+    <element name="Feat 3 Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT3"/>
+    <element name="Feat 4 Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT4"/>
+</elements>
