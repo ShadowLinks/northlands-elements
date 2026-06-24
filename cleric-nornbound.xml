@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name></name>
+        <update version="0.0.1">
+            <file name="cleric-nornbound.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/cleric-nornbound.xml" />
+        </update>
+    </info>
+    <element name="Nornbound" type="Archetype" source="Northlands (2024)"  id="ID_KPB_NL_ARCHETYPE_CLERIC_NORNBOUND">
+        <supports>Cleric Subclass</supports>
+        <description>
+            <p class="flavor">Weaves the Threads of Fate</p>
+            <p>The Nornbound Cleric pays homage to the Norns and in return is granted the ability to see and manipulate the threads of mortals' fates. This power, seen as tampering to some, can help or hinder the outcome of actions taken by the Cleric's targets. While Nornbound offer prayers to the other gods, the Norns are the guiding light to whom they have pledged their service.</p>
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_SPELLS" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_TAILOR_THE_SKEIN" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_PLUCKING_THE_THREADS" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_INTERTWINED_FATE" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_SKEIN_WEAVER" />
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_SPELLS" level="3" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_TAILOR_THE_SKEIN" level="3" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_PLUCKING_THE_THREADS" level="3" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_INTERTWINED_FATE" level="6" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_SKEIN_WEAVER" level="17" />
+
+        </rules>
+    </element>
+    <element name="Level 3: Domain Spells" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_SPELLS">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_SPELLS</requirements>
+        <description>
+            <p>Your connection to the threads of Fate allows you to always have certain spells ready. When you reach a Cleric level specified in the Nornbound Spells table, you thereafter always have the listed spells prepared.</p>
+            <table>
+                <tr>
+                    <th>Cleric Level</th>
+                    <th>Spells</th>
+                </tr>
+                <tr>
+                    <td>3rd</td>
+                    <td>Augury, Warding Bond</td>
+                </tr>
+                <tr>
+                    <td>5th</td>
+                    <td>Bestow Curse, Counterspell</td>
+                </tr>
+                <tr>
+                    <td>7th</td>
+                    <td>Death Ward, Divination</td>
+                </tr>
+                <tr>
+                    <td>9th</td>
+                    <td>Commune, Modify Memory</td>
+                </tr>
+            </table>
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_AUGURY" level="3" />
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_WARDING_BOND" level="3" />
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_BESTOW_CURSE" level="5" />
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_COUNTERSPELL" level="5" />
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DEATH_WARD" level="7" />
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DIVINATION" level="7" />
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMMUNE" level="9" />
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MODIFY_MEMORY" level="9" />
+        </rules>
+    </element>
+    <element name="Level 3: Tailor the Skein" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_TAILOR_THE_SKEIN">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_CLERIC_NORNBOUND_TAILOR_THE_SKEIN</requirements>
+        <description>
+            <p>You can see the threads of the celestial skein and manipulate them in service to your faith. Whenever you finish a Long Rest, roll a d6 twice and record the numbers rolled. These numbers are known as Skeins. As a Reaction, after learning the result of an attack, damage roll, saving throw, or ability check made by a creature you can see with 60 feet, you may add or subtract one of your Skeins from the result. This can cause the roll to succeed or fail when it otherwise wouldn’t have. If you add or subtract a Skein from a damage roll, it could cause a creature to live or die when it otherwise wouldn’t have.</p>
+            <p class="indent">Your die increases at higher level. At 7th level it, becomes a d8; at 11th level, it becomes a d10; and at 15th level it becomes a d12.</p>
+            <p class="indent">Each Skein can be used only once. When you finish a Long Rest, you regain all Skeins</p>
+        </description>
+        <sheet alt="Tailor the Skein" usage="2/Long Rest">
+            <description>Whenever you finish a Long Rest, roll a d{{skeindie}} twice and record the numbers rolled. These numbers are known as Skeins. As a Reaction, after learning the result of an attack, damage roll, saving throw, or ability check made by a creature you can see with 60 feet, you may add or subtract one of your Skeins from the result. This can cause the roll to succeed or fail when it otherwise wouldn’t have.</description>
+        </sheet>
+        <rules>
+            <stat name="skeindie" value="6" bonus="base" />
+            <stat name="skeindie" value="2" level="7"/>
+            <stat name="skeindie" value="2" level="11"/>
+            <stat name="skeindie" value="2" level="15"/>
+        </rules>
+    </element>
+    <element name="Level 3: Plucking the Threads" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_PLUCKING_THE_THREADS">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_CLERIC_NORNBOUND_PLUCKING_THE_THREADS</requirements>
+        <description>
+            <p>As a Bonus Action, you present your holy symbol and expend a use of your Channel Divinity to alter the weaves of Fate around you. Allies within 30 feet of you have Advantage on attack rolls and saving throws until the end of your next turn.</p>
+        </description>
+        <sheet alt="Plucking the Threads" action="Bonus Action" usage="Channel Divinty">
+            <description>As a Bonus Action, you present your holy symbol and expend a use of your Channel Divinity. Allies within 30 feet of you have Advantage on attack rolls and saving throws until the end of your next turn.</description>
+        </sheet>
+    </element>
+    <element name="Level 6: Intertwined Fate" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_INTERTWINED_FATE">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_CLERIC_NORNBOUND_INTERTWINED_FATE</requirements>
+        <description>
+            <p>As a Magic action, you expend a spell slot, twisting and altering the life threads of two creatures you can see within 30 feet of you, choosing one to be the primary and the other the secondary. The primary target must make a Constitution saving throw, taking 1d8 Force damage per spell slot level on a failure or half as much on a success. The creature may choose to fail this saving throw. The secondary target then receives Hit Points equal to the damage the first target took, either regaining lost Hit Points, if injured, or gaining Temporary Hit Points if uninjured.</p>
+        </description>
+        <sheet alt="Intertwined Fate" action="Action">
+            <description>As a Magic action, you expend a spell slot and affect two creatures you can see within 30 feet of you, choosing one to be the primary and the other the secondary. The primary target must make a CON saving throw, taking 1d8 Force damage per spell slot level on a failure or half as much on a success. The creature may choose to fail this saving throw. The secondary target then receives Hit Points equal to the damage the first target took, either regaining lost Hit Points, if injured, or gaining Temporary Hit Points if uninjured.</description>
+        </sheet>
+    </element>
+    <element name="Level 17: Skein Weaver" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_CLERIC_NORNBOUND_SKEIN_WEAVER">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_CLERIC_NORNBOUND_SKEIN_WEAVER</requirements>
+        <description>
+            <p>When you use your Plucking at Threads feature, enemies within 30 feet of you must make a Charisma saving throw against your spell save DC. An enemy that fails the save has Disadvantage on attack rolls and saving throws for 1 minute. It can make a saving throw at the end of each of its turns to end this effect. An enemy that succeeds on its saving throw has Immunity to this feature for 24 hours.</p>
+        </description>
+        <sheet alt="Skein Weaver">
+            <description>When you use your Plucking at Threads feature, enemies within 30 feet of you must make a DC {{spellcasting:dc}} CHA saving throw. An enemy that fails the save has Disadvantage on attack rolls and saving throws for 1 minute. It can make a saving throw at the end of each of its turns to end this effect. An enemy that succeeds on its saving throw has Immunity to this feature for 24 hours.</description>
+        </sheet>
+    </element>
+    
+    <element name="Domain Spells Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_SPELLS"/>
+    <element name="Tailor the Skein Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_CLERIC_NORNBOUND_TAILOR_THE_SKEIN"/>
+    <element name="Plucking the Threads Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_CLERIC_NORNBOUND_PLUCKING_THE_THREADS"/>
+    <element name="Intertwined Fate Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_CLERIC_NORNBOUND_INTERTWINED_FATE"/>
+    <element name="Skein Weaver Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_CLERIC_NORNBOUND_SKEIN_WEAVER"/>
+</elements>
