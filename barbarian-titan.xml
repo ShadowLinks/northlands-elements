@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name></name>
+        <update version="0.0.1">
+            <file name="barbarian-titan.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/source.xml" />
+        </update>
+    </info>
+    <element name="Path of the Titan" type="Archetype" source="Northlands" id="ID_KPB_NL_ARCHETYPE_BARBARIAN_TITAN">
+        <supports>Barbarian Subclass</supports>
+        <description>
+            <p class="flavor">Bigger is Better</p>
+            <p>There is no denying the might of Jotunheim. Even the smallest of the giants exemplifies the sheer physical power passed down from Aurgelmir, the first giant. Barbarians who follow the Path of the Titan channel the spirits of the jotun through their rage. These otherworldly furies swell the Barbarian’s physical form to one that matches the power and might of their rage, causing them to tower over their foes.</p>
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_RAGE_OF_THE_GIANTS" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_CRUSHING_STEPS" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_TITANIC_STRIKES" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_RAGE_OF_THE_TITANS" />
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_RAGE_OF_THE_GIANTS" level="3" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_CRUSHING_STEPS" level="6" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_TITANIC_STRIKES" level="10" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_RAGE_OF_THE_TITANS" level="14" />
+
+        </rules>
+    </element>
+    <element name="Level 3: Rage of the Giants" type="Archetype Feature" source="Northlands" id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_RAGE_OF_THE_GIANTS">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_RAGE_OF_THE_GIANTS</requirements>
+        <description>
+            <p>Your Rage taps into the primal power of giants. Whenever you activate your Rage, if you are smaller than Large, you can choose to become Large. Your equipment grows to match your new size. If there is not enough room for you to become Large, you do not grow.</p>
+            <p class="indent">While you are Large, your carrying capacity doubles, you have Advantage on Strength checks and Strength saving throws, and your attacks with weapons or Unarmed Strikes deal one additional die of damage (a greatsword attack deals 3d6 damage, a greataxe deals 2d12, and so on).</p>
+        </description>
+        <sheet alt="Rage of the Giants">
+            <description>You can choose to grow to large size when you activate Rage if there is enough room. Large size grants 2x carrying capacity, advantage on STR checks and throws, and weapon attacks and unarmed strikes deal and additional damage die.</description>
+        </sheet>
+    </element>
+    <element name="Level 6: Crushing Steps" type="Archetype Feature" source="Northlands" id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_CRUSHING_STEPS">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_TITAN_CRUSHING_STEPS</requirements>
+        <description>
+            <p>As part of your movement, you can move through the space of any creature with a size smaller than you. An enemy whose space you move through must succeed on a Strength saving throw (DC 8 plus your Strength modifier and Proficiency Bonus) or have the Prone condition and lose the ability to take Reactions until the start of its next turn.</p>
+        </description>
+        <sheet alt="Crushing Steps">
+            <description>As part of your movement, you can move through the space of any creature with a size smaller than you. An enemy whose space you move through must succeed on a DC {{crushing-steps:dc}} STR saving throw or have the Prone condition and lose the ability to take Reactions until the start of its next turn.</description>
+        </sheet>
+        <rules>
+            <stat name="crushing-steps:dc" value="8" bonus="base" />
+            <stat name="crushing-steps:dc" value="proficiency" />
+            <stat name="crushing-steps:dc" value="strength:modifier" />
+        </rules>
+    </element>
+    <element name="Level 10: Titanic Strikes" type="Archetype Feature" source="Northlands" id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_TITANIC_STRIKES">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_TITAN_TITANIC_STRIKES</requirements>
+        <description>
+            <p>When you use your Brutal Strike feature, the distance the target is pushed by your Forceful Blow is doubled, and the Speed of a target struck by your Hamstring Blow is reduced to 0 until the start of your next turn.</p>
+        </description>
+        <sheet alt="Titanic Strikes">
+            <description>When you use your Brutal Strike feature, the distance the target is pushed by your Forceful Blow is doubled, and the Speed of a target struck by your Hamstring Blow is reduced to 0 until the start of your next turn.</description>
+        </sheet>
+    </element>
+    <element name="Level 14: Rage of the Titans" type="Archetype Feature" source="Northlands" id="ID_KP_NL_ARCHETYPE_FEATURE_BARBARIAN_TITAN_RAGE_OF_THE_TITANS">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_TITAN_RAGE_OF_THE_TITANS</requirements>
+        <description>
+            <p>Whenever you activate your Rage, if you are smaller than Huge, you can choose to become Huge. Your equipment grows to match your new size. If there is not enough room for you to become Huge, you become Large. If there is not enough room for you to become Large, you do not grow.</p>
+            <p class="indent">While you are Huge, your carrying capacity triples, your reach increases by 5 feet, you have Advantage on Strength checks and Strength saving throws, and your attacks with weapons or unarmed strikes deal two additional dice of damage (a greatsword attack deals 4d6 damage, a greataxe deals 3d12, and so on.)</p>
+        </description>
+        <sheet alt="Rage of the Titans">
+            <description>When you activated Rage, you can choose to become Huge, or Large if there is enough room. Huge size grants 3x carrying capacity, increases reach by 5ft., advantage on STR checks and throws, and weapon attacks and unarmed strikes deal 2 additional damage die.</description>
+        </sheet>
+    </element>
+    
+    <element name="Rage of the Giants Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_RAGE_OF_THE_GIANTS"/>
+    <element name="Crushing Steps Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_TITAN_CRUSHING_STEPS"/>
+    <element name="Titanic Strikes Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_TITAN_TITANIC_STRIKES"/>
+    <element name="Rage of the Titans Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_TITAN_RAGE_OF_THE_TITANS"/>
+</elements>
