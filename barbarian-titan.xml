@@ -3,7 +3,7 @@
     <info>
         <name></name>
         <update version="0.0.1">
-            <file name="barbarian-titan.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/source.xml" />
+            <file name="barbarian-titan.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/barbarian-titan.xml" />
         </update>
     </info>
     <element name="Path of the Titan" type="Archetype" source="Northlands (2024)"  id="ID_KPB_NL_ARCHETYPE_BARBARIAN_TITAN">
