@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name></name>
+        <update version="0.0.1">
+            <file name="fighter-viking.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/fighter-viking.xml" />
+        </update>
+    </info>
+    <element name="Viking" type="Archetype" source="Northlands (2024)"  id="ID_KPB_NL_ARCHETYPE_FIGHTER_VIKING">
+        <supports>Fighter Subclass</supports>
+        <description>
+            <p class="flavor">Dangerous Raider of the Sea</p>
+            <p>Vikings are battle-hardened warriors and sailors who ply the seas of the Northlands for glory and plunder. As followers of the Reaver’s Way, they have their own sense of honor, yet they can be merciless in times of raiding and war. Vikings are known for their prowess with the spear and axe, and for their belief that they can earn a special place in the halls of the dead through their deeds of valor in battle.</p>
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_SEABORNE" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_VIKING_WEAPON_MASTERY" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_SAVAGE_CHARGE" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_CALL_OF_THE_NORTHLANDS" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_MARAUDERS_REPRISAL" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_UNSTOPPABLE_ASSAULT" />
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_SEABORNE" level="3" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_VIKING_WEAPON_MASTERY" level="3" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_SAVAGE_CHARGE" level="7" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_CALL_OF_THE_NORTHLANDS" level="10" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_MARAUDERS_REPRISAL" level="15" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_UNSTOPPABLE_ASSAULT" level="18" />
+
+        </rules>
+    </element>
+    <element name="Level 3: Seaborne" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_SEABORNE">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_SEABORNE</requirements>
+        <description>
+            <p>You are used to being aboard rocking ships and other vehicles. You have Advantage on all Strength and Dexterity saving throws and checks to avoid being pushed, having the Prone condition, or otherwise being moved against your will.</p>
+            <p class="indent">In addition, you have Advantage on checks to pilot or otherwise control a waterborne vehicle, such as a canoe or longboat.</p>
+        </description>
+        <sheet alt="Seaborne">
+            <description>You have Advantage on all Strength and Dexterity saving throws and checks to avoid being pushed, having the Prone condition, or otherwise being moved against your will.
+            In addition, you have Advantage on checks to pilot or otherwise control a waterborne vehicle, such as a canoe or longboat.</description>
+        </sheet>
+    </element>
+    <element name="Level 3: Viking Weapon Mastery" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_VIKING_WEAPON_MASTERY">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_FIGHTER_VIKING_VIKING_WEAPON_MASTERY</requirements>
+        <description>
+            <p>If you have Weapon Mastery with a Battleaxe, Longsword, or Spear, once on each of your turns, you can add your Proficiency Bonus to a damage roll with that weapon.</p>
+        </description>
+        <sheet alt="Viking Weapon Mastery" usage="1/Turn">
+            <description>If you have Weapon Mastery with a Battleaxe, Longsword, or Spear, once on each of your turns, you can add +{{proficiency}} to a damage roll with that weapon.</description>
+        </sheet>
+    </element>
+    <element name="Level 7: Savage Charge" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_SAVAGE_CHARGE">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_FIGHTER_VIKING_SAVAGE_CHARGE</requirements>
+        <description>
+            <p>As an Attack action, you can move up to your Speed and make a single melee attack. If this attack hits, you can use a Bonus Action to take the Dash action. With the movement from this Dash action, you can pass through the space of the target and do not provoke Opportunity Attacks.</p>
+        </description>
+        <sheet alt="Savage Charge" action="Action">
+            <description>As an Attack action, you can move up to your Speed and make a single melee attack. If this attack hits, you can use a Bonus Action to take the Dash action. With the movement from this Dash action, you can pass through the space of the target and do not provoke Opportunity Attacks.</description>
+        </sheet>
+    </element>
+    <element name="Level 10: Call of the Northlands" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_CALL_OF_THE_NORTHLANDS">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_FIGHTER_VIKING_CALL_OF_THE_NORTHLANDS</requirements>
+        <description>
+            <p>You are used to facing the harsh conditions and vicious monsters of the Northlands. At the end of a long rest, you may choose one of these benefits. The one you choose replaces your choice from the previous day.</p>
+            <p class="indent"><strong>Dragonslayer.</strong> You have Advantage on attack rolls you make against Dragons, such as red dragons and wyverns.</p>
+            <p class="indent"><strong>Hardy Swimmer.</strong> You have a Swim Speed equal to your Speed.</p>
+            <p class="indent"><strong>Inured to Cold.</strong> You have Resistance to Cold damage.</p>
+            <p class="indent"><strong>Trollslayer.</strong> You have Advantage on attack rolls you make against Giants, such as frost giants and trolls.</p>
+        </description>
+        <sheet alt="Call of the Northlands">
+            <description>At the end of a long rest, you may choose one of these benefits. The one you choose replaces your choice from the previous day.
+            Dragonslayer. You have Advantage on attack rolls you make against Dragons, such as red dragons and wyverns.
+            Hardy Swimmer. You have a Swim Speed equal to your Speed.
+            Inured to Cold. You have Resistance to Cold damage.
+            Trollslayer. You have Advantage on attack rolls you make against Giants, such as frost giants and trolls.</description>
+        </sheet>
+    </element>
+    <element name="Level 15: Marauder's Reprisal" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_MARAUDERS_REPRISAL">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_FIGHTER_VIKING_CALL_OF_THE_NORTHLANDS</requirements>
+        <description>
+            <p>When you become Bloodied or if a creature scores a Critical Hit against you, you can use your Reaction to make an attack against an enemy within your reach, if there is one. If the attack hits, you score a Critical Hit, and you gain a number of Temporary Hit Points equal to half your level.</p>
+            <p class="indent">You can use this feature a number of times equal to your Proficiency Bonus, and you regain all uses once you’ve finished a Long Rest.</p>
+        </description>
+        <sheet alt="Marauder's Reprisal" usage="{{proficiency}}/Long Rest" action="Reaction">
+            <description>When you become Bloodied or if a creature scores a Critical Hit against you, you can use your Reaction to make an attack against an enemy within your reach, if there is one. If the attack hits, you score a Critical Hit, and you gain {{level:half}} Temporary Hit Points.</description>
+        </sheet>
+    </element>
+    <element name="Level 18: Unstoppable Assault" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_FIGHTER_VIKING_UNSTOPPABLE_ASSAULT">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_FIGHTER_VIKING_CALL_OF_THE_NORTHLANDS</requirements>
+        <description>
+            <p>As an action, you spin your weapon in a furious arc, decimating all creatures before you. You can attack a number of times equal to half your Proficiency Bonus in addition to your normal attacks. If any of these attacks hit, they are Critical Hits, and a creature struck by the attack must succeed on a Strength saving throw (DC 8 + your Proficiency Bonus + your Strength modifier) or be pushed 10 feet away from you.</p>
+            <p class="indent">Once you have used this feature, you cannot use it again until after you’ve finished a Long Rest.</p>
+        </description>
+        <sheet alt="Unstoppable Assault" usage="1/Long Rest" action="Action">
+            <description>As an action, you spin your weapon in a furious arc, decimating all creatures before you. You can attack {{proficiency:half}} times in addition to your normal attacks. If any of these attacks hit, they are Critical Hits, and a creature struck by the attack must succeed on a DC {{unstoppable-assault:dc}} Strength saving throw or be pushed 10 feet away from you.
+            </description>
+        </sheet>
+        <rules>
+            <stat name="unstoppable-assault:dc" value="8" bonus="base" />
+            <stat name="unstoppable-assault:dc" value="proficiency" />
+            <stat name="unstoppable-assault:dc" value="strength:modifier" />
+        </rules>
+    </element>
+    
+    <element name="Seaborne Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_SEABORNE"/>
+    <element name="Viking Weapon Mastery Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_FIGHTER_VIKING_VIKING_WEAPON_MASTERY"/>
+    <element name="Savage Charge Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_FIGHTER_VIKING_SAVAGE_CHARGE"/>
+    <element name="Call of the Northlands Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_FIGHTER_VIKING_CALL_OF_THE_NORTHLANDS"/>
+    <element name="Marauder's Reprisal Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_FIGHTER_VIKING_MARAUDERS_REPRISAL"/>
+    <element name="Unstoppable Assault Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_FIGHTER_VIKING_UNSTOPPABLE_ASSAULT"/>
+</elements>
