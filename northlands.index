@@ -10,6 +10,14 @@
 	</info>
 	<files>
 		<file name="source.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/source.xml" />
-
+		
+		<file name="barbarian-titan.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/barbarian-titan.xml" />
+		<file name="bard-skald.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/bard-skald.xml" />
+		<file name="cleric-nornbound.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/cleric-nornbound.xml" />
+		<file name="druid-fenris.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/druid-fenris.xml" />
+		<file name="fighter-viking.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/fighter-viking.xml" />
+		<file name="paladin-valhalla.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/paladin-valhalla.xml" />
+		<file name="sorcerer-spiritcaller.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/sorcerer-spiritcaller.xml" />
+		<file name="warlock-trickster.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/warlock-trickster.xml" />
 	</files>
 </index>
