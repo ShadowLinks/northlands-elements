@@ -3,74 +3,208 @@
     <info>
         <name></name>
         <update version="0.0.1">
-            <file name="bard-skald.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/bard-skald.xml" />
+            <file name="sorcerer-spiritcaller.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/sorcerer-spiritcaller.xml" />
         </update>
     </info>
-    <element name="Skald" type="Archetype" source="Northlands (2024)"  id="ID_KPB_NL_ARCHETYPE_BARD_SKALD">
-        <supports>Bard Subclass</supports>
+    <element name="Spirit Caller" type="Archetype" source="Northlands (2024)"  id="ID_KPB_NL_ARCHETYPE_SORCERER_SPIRITCALLER">
+        <supports>Sorcerer Subclass</supports>
         <description>
-            <p class="flavor"></p>
-            <p></p>
-            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT1" />
-            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT2" />
-            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT3" />
-            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT4" />
+            <p class="flavor">Empowered by Ancestral Spirits</p>
+            <p>You were born with a strong, otherworldly connection to the spirits of your ancestors and to the honored dead. You can call on these spirits to aid you and your allies, and to hinder your enemies.</p>
+            <p class="indent">Symbols are important in the cultures of the Northlands, and the spirits are no exception. Rather than manifesting as the people they were in life, the spirits take on a symbolic appearance, usually as ghostly animals that speak as their formal selves. In the Northlands, these animals reflect those found in that region, though it’s possible that other animals might be represented as well. You can choose the animal form that your spirits take or roll on the Spirit Animal Form table.</p>
+            <p class="indent">Many spirit callers believe that when they wield magic, they are directly assisted by their ancestral spirits. The Mage Armor spell may be the spirit of a dead blacksmith crafting spiritual armor for you, while the Magic Missile spell may be fired by the spirit of your clan’s greatest archer.</p>
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPELLS" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_OCCULT_EXPERTISE" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPIRIT_GUIDANCE" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPIRIT_AURA" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPIRITUAL_SECRETS" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPIRITUAL_STORM" />
         </description>
         <sheet display="false">
             <description></description>
         </sheet>
         <rules>
-            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT1" level="3" />
-            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT2" level="6" />
-            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT3" level="10" />
-            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT4" level="14" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM" level="3" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPELLS" level="3" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_OCCULT_EXPERTISE" level="6" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPIRIT_GUIDANCE" level="10" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPIRIT_AURA" level="14" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPIRITUAL_SECRETS" level="14" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPIRITUAL_STORM" level="14" />
 
         </rules>
     </element>
-    <element name="Level 3: Feat 1" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT1">
-        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_FEAT1</requirements>
+    
+    <element name="Spirit Animal Form" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM">
         <description>
-            <p></p>
+            <table>
+                <thead>
+                    <tr><td>d12</td><td>Animal</td></tr>
+                </thead>
+                <tr><td>1</td><td>Arctic Fox</td></tr>
+                <tr><td>2</td><td>Bat</td></tr>
+                <tr><td>3</td><td>Falcon/Hawk</td></tr>
+                <tr><td>4</td><td>Fish</td></tr>
+                <tr><td>5</td><td>Hare</td></tr>
+                <tr><td>6</td><td>Lynx</td></tr>
+                <tr><td>7</td><td>Owl</td></tr>
+                <tr><td>8</td><td>Raven</td></tr>
+                <tr><td>9</td><td>Snake</td></tr>
+                <tr><td>10</td><td>Squirrel</td></tr>
+                <tr><td>11</td><td>Toad</td></tr>
+                <tr><td>12</td><td>Weasel</td></tr>
+            </table>
         </description>
-        <sheet alt="Feat 1">
-            <description></description>
-        </sheet>
+        <sheet display="false" />
+        <rules>
+            <select name="Spirit Animal Form" type="Archetype Feature" supports="Spirit-Animal-Form" />
+        </rules>
     </element>
-    <element name="Level 6: Feat 2" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT2">
-        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT2</requirements>
+    <element name="Spirit Animal Form: Arctic Fox" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM_FOX">
+        <supports>Spirit-Animal-Form</supports>
+        <description></description>
+    </element>
+    <element name="Spirit Animal Form: Bat" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM_BAT">
+        <supports>Spirit-Animal-Form</supports>
+        <description></description>
+    </element>
+    <element name="Spirit Animal Form: Falcon/Hawk" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM_FALCON">
+        <supports>Spirit-Animal-Form</supports>
+        <description></description>
+    </element>
+    <element name="Spirit Animal Form: Fish" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM_FISH">
+        <supports>Spirit-Animal-Form</supports>
+        <description></description>
+    </element>
+    <element name="Spirit Animal Form: Hare" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM_HARE">
+        <supports>Spirit-Animal-Form</supports>
+        <description></description>
+    </element>
+    <element name="Spirit Animal Form: Lynx" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM_LYNX">
+        <supports>Spirit-Animal-Form</supports>
+        <description></description>
+    </element>
+    <element name="Spirit Animal Form: Owl" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM_OWL">
+        <supports>Spirit-Animal-Form</supports>
+        <description></description>
+    </element>
+    <element name="Spirit Animal Form: Raven" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM_RAVEN">
+        <supports>Spirit-Animal-Form</supports>
+        <description></description>
+    </element>
+    <element name="Spirit Animal Form: Snake" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM_SNAKE">
+        <supports>Spirit-Animal-Form</supports>
+        <description></description>
+    </element>
+    <element name="Spirit Animal Form: Squirrel" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM_SQUIRREL">
+        <supports>Spirit-Animal-Form</supports>
+        <description></description>
+    </element>
+    <element name="Spirit Animal Form: Toad" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM_TOAD">
+        <supports>Spirit-Animal-Form</supports>
+        <description></description>
+    </element>
+    <element name="Spirit Animal Form: Weasel" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_FORM_WEASEL">
+        <supports>Spirit-Animal-Form</supports>
+        <description></description>
+    </element>
+    <element name="Level 3: Spirit Caller Spells" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPELLS">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_SORCERER_SPELLS</requirements>
         <description>
-            <p></p>
+            <p>When you reach a Sorcerer level specified in the Spirit Caller Spells table, you thereafter always have the listed spells prepared.</p>
+            <table>
+                <thead>
+                    <tr><td>Sorcerer Level</td><td>Spells</td></tr>
+                </thead>
+                <tr><td>3</td><td>Bane, Bless, Heroism, Protection from Evil and Good</td></tr>
+                <tr><td>5</td><td>Augury, Healing Spirit</td></tr>
+                <tr><td>7</td><td>Speak with Dead, Spirit Guardians</td></tr>
+                <tr><td>9</td><td>Aura of Life, Death Ward</td></tr>
+            </table>
         </description>
-        <sheet alt="Feat 2">
+        <sheet alt="Spirit Caller Spells">
             <description></description>
         </sheet>
         <rules>
-            <stat name="crushing-steps:dc" value="8" bonus="base" />
-            <stat name="crushing-steps:dc" value="proficiency" />
-            <stat name="crushing-steps:dc" value="strength:modifier" />
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_BANE" level="3" spellcasting="Sorcerer" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_BLESS" level="3" spellcasting="Sorcerer" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_HEROISM" level="3" spellcasting="Sorcerer" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_PROTECTION_FROM_EVIL_AND_GOOD" level="3" spellcasting="Sorcerer" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_AUGURY" level="5" spellcasting="Sorcerer" prepared="true"/>
+            <grant type="Spell" id="ID_XGTE_SPELL_HEALING_SPIRIT" level="5" spellcasting="Sorcerer" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPEAK_WITH_DEAD" level="7" spellcasting="Sorcerer" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPIRIT_GUARDIANS" level="7" spellcasting="Sorcerer" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_LIFE" level="9" spellcasting="Sorcerer" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DEATH_WARD" level="9" spellcasting="Sorcerer" prepared="true"/>
         </rules>
     </element>
-    <element name="Level 10: Feat 3" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT3">
-        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT3</requirements>
+    <element name="Level 3: Occult Expertise" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_OCCULT_EXPERTISE">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_SORCERER_SPIRITCALLER_OCCULT_EXPERTISE</requirements>
         <description>
-            <p></p>
+            <p>You gain proficiency in the Arcana and Religion skills if you don’t already have it. When making checks with these skills, you can use your Charisma modifier instead of your Intelligence modifier, if it is higher.</p>
         </description>
-        <sheet alt="Feat 3">
-            <description></description>
+        <sheet alt="Occult Expertise">
+            <description>For Arcana and Religion skills, you can use your Charisma modifier instead of your Intelligence modifier, if it is higher.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_RELIGION" />
+        </rules>
+    </element>
+    <element name="Level 3: Spirit Guidance" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPIRIT_GUIDANCE">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_SORCERER_SPIRITCALLER_SPIRIT_GUIDANCE</requirements>
+        <description>
+            <p>You can call on ancestral and cultural spirits to help guide you. As a Bonus Action, you can give yourself Advantage on a skill check.</p>
+            <p class="indent">You can use this feature a number of times equal to your Charisma modifier (minimum of one), and you regain all expended uses when you finish a Long Rest.</p>
+        </description>
+        <sheet alt="Spirit Guidance" action="Bonus Action" usage="{{charisma:modifier}}/Long Rest">
+            <description>As a Bonus Action, you can give yourself Advantage on a skill check.
+            </description>
         </sheet>
     </element>
-    <element name="Level 14: Feat 4" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT4">
-        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT4</requirements>
+    <element name="Level 6: Spirit Aura" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPIRIT_AURA">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_SORCERER_SPIRITCALLER_SPIRIT_AURA</requirements>
         <description>
-            <p></p>
+            <p>You can use a Bonus Action to call on spirits to surround you or an ally. This takes the form of a spirit aura that extends 10 feet from you or a willing ally of your choice in all directions and lasts for 1 minute, until you have the Incapacitated condition, or until you use a Bonus Action to dismiss it. Choose one of the following options when you use this feature.</p>
+            <p class="indent"><strong>Maddening Whispers.</strong> The spirits whisper dark secrets into your enemies’ minds, unsettling them. An enemy creature that enters the aura or starts its turn there must succeed on a Wisdom saving throw or have Disadvantage on ability checks and attack rolls until the end of its next turn.</p>
+            <p class="indent"><strong>Bolstering Whispers.</strong> The spirits whisper encouragements and alerts to your allies. An allied creature who enters the aura or starts its turn there has Advantage on ability checks and attack rolls until the end of its next turn.</p>
+            <p class="indent">You can use this twice, and you regain all uses when you finish a Long Rest. You can use this feature again if you spend 3 Sorcery Points.</p>
         </description>
-        <sheet alt="Feat 4">
-            <description></description>
+        <sheet alt="Spirit Aura" action="Bonus Action" usage="2/Long Rest">
+            <description>You can use a Bonus Action to call on spirits to surround you or an ally. This takes the form of a spirit aura that extends 10 feet from you or a willing ally of your choice in all directions and lasts for 1 minute, until you have the Incapacitated condition, or until you use a Bonus Action to dismiss it. Choose one of the following options when you use this feature.
+            Maddening Whispers. An enemy creature that enters the aura or starts its turn there must succeed on a Wisdom saving throw or have Disadvantage on ability checks and attack rolls until the end of its next turn.
+            Bolstering Whispers. An allied creature who enters the aura or starts its turn there has Advantage on ability checks and attack rolls until the end of its next turn.
+            You can regain this feature again if you spend 3 Sorcery Points.</description>
+        </sheet>
+    </element>
+    <element name="Level 14: Spiritual Secrets" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPIRITUAL_SECRETS">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_SORCERER_SPIRITCALLER_SPIRITUAL_SECRETS</requirements>
+        <description>
+            <p>The spirits know secrets, collected from their time in the realms of the dead. These secrets might include a creature’s weaknesses, a person’s dreams, or the properties of a magic item. You can call on the spirits to share their secrets with you.</p>
+            <p class="indent">When you make an ability check, attack roll, or saving throw, and the roll fails, you can call on the spirits’ knowledge and roll again. You must take the result of the second roll.</p>
+            <p class="indent">You can use this feature a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a Long Rest. If you have no more uses, you can spend 3 Sorcery Points to gain one (no action required).</p>
+        </description>
+        <sheet alt="Spiritual Secrets" usage="{{charisma:modifier}}/Long Rest">
+            <description>The spirits know secrets, collected from their time in the realms of the dead. These secrets might include a creature’s weaknesses, a person’s dreams, or the properties of a magic item. You can call on the spirits to share their secrets with you.
+            When you make an ability check, attack roll, or saving throw, and the roll fails, you can call on the spirits’ knowledge and roll again. You must take the result of the second roll.
+            If you have no more uses, you can spend 3 Sorcery Points to gain one (no action required).</description>
+        </sheet>
+    </element>
+    <element name="Level 18: Spiritual Storm" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_SORCERER_SPIRITCALLER_SPIRITUAL_STORM">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_SORCERER_SPIRITCALLER_SPIRITUAL_STORM</requirements>
+        <description>
+            <p>Your spirit aura now extends 15 feet instead of 10 feet. In addition, an enemy that enters your aura or starts there takes 2d8 Psychic damage, though no more than once per turn.</p>
+        </description>
+        <sheet alt="Spiritual Storm">
+            <description>Your spirit aura now extends 15 feet instead of 10 feet. In addition, an enemy that enters your aura or starts there takes 2d8 Psychic damage, though no more than once per turn.</description>
         </sheet>
     </element>
     
-    <element name="Feat 1 Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_FEAT1"/>
-    <element name="Feat 2 Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT2"/>
-    <element name="Feat 3 Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT3"/>
-    <element name="Feat 4 Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT4"/>
+    <element name="Spirit Caller Spells Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_SORCERER_SPELLS"/>
+    <element name="Occult Expertise Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_SORCERER_SPIRITCALLER_OCCULT_EXPERTISE"/>
+    <element name="Spirit Guidance Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_SORCERER_SPIRITCALLER_SPIRIT_GUIDANCE"/>
+    <element name="Spirit Aura Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_SORCERER_SPIRITCALLER_SPIRIT_AURA"/>
+    <element name="Spirit Aura Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_SORCERER_SPIRITCALLER_SPIRITUAL_SECRETS"/>
+    <element name="Spirit Aura Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_SORCERER_SPIRITCALLER_SPIRITUAL_STORM"/>
 </elements>
