@@ -3,74 +3,170 @@
     <info>
         <name></name>
         <update version="0.0.1">
-            <file name="bard-skald.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/bard-skald.xml" />
+            <file name="paladin-valhalla.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/paladin-valhalla.xml" />
         </update>
     </info>
-    <element name="Skald" type="Archetype" source="Northlands (2024)"  id="ID_KPB_NL_ARCHETYPE_BARD_SKALD">
-        <supports>Bard Subclass</supports>
+    <element name="Oath of Valhalla" type="Archetype" source="Northlands (2024)"  id="ID_KPB_NL_ARCHETYPE_PALADIN_VALHALLA">
+        <supports>Paladin Subclass</supports>
         <description>
-            <p class="flavor"></p>
-            <p></p>
-            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT1" />
-            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT2" />
-            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT3" />
-            <div element="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT4" />
+            <p class="flavor">Demonstrate Bravery and Honor the Dead</p>
+            <p>Paladins who take the Oath of Valhalla ensure they preserve the spirits of those who have died honorably in battle, even their foes. Of course, these Paladins also strive to prove themselves deserving of entry into Valhalla through their own deeds and words. The thunderous revelry of the heroic dead echoing from the gods’ mead hall in Asgard fills these paladins, imbuing them with the might of deceased champions.</p>
+            <p class="indent">These Paladins look askance at those who restore heroes to life, but they assume such heroes have agreed to return from Valhalla to continue to fight as mortals. However, they offer no quarter to blasphemers who animate corpses into a mockery of life.</p>
+            <p>These Paladins share the following tenets.</p>
+            <p class="indent">
+                <b><i>Protect the worthy dead.</i></b>               
+            </p>
+            <p class="indent">
+                <b><i>Inspire courage in battle.</i></b>
+            </p>
+            <p class="indent">
+                <b><i>Bring justice to those who make a mockery of the dead</i></b></p>
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_ENCOURAGING_SMITE" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_GUARDIAN_OF_THE_DEAD" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_SPELLS" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_THUDEROUS_AURA" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_VALOROUS_SOUL" />
+            <div element="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_SPIRIT_OF_THE_VALKYRIE" />
         </description>
         <sheet display="false">
             <description></description>
         </sheet>
         <rules>
-            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT1" level="3" />
-            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT2" level="6" />
-            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT3" level="10" />
-            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT4" level="14" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_ENCOURAGING_SMITE" level="3" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_GUARDIAN_OF_THE_DEAD" level="3" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_SPELLS" level="3" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_THUDEROUS_AURA" level="7" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_VALOROUS_SOUL" level="15" />
+            <grant type="Archetype Feature" id="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_SPIRIT_OF_THE_VALKYRIE" level="20" />
 
         </rules>
     </element>
-    <element name="Level 3: Feat 1" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT1">
-        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_FEAT1</requirements>
+    <element name="Level 3: Encouraging Smite" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_ENCOURAGING_SMITE">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_ENCOURAGING_SMITE</requirements>
         <description>
-            <p></p>
+            <p>Immediately after you cast Divine Smite, you can expend one use of your Channel Divinity and select creatures of your choice within 30 feet of yourself. Until the start of your next turn, these creatures have Advantage on their attack rolls and saving throws against the target of your Divine Smite, and their attacks against the target deal an extra 1d4 Thunder damage.</p>
         </description>
-        <sheet alt="Feat 1">
-            <description></description>
+        <sheet alt="Encouraging Smite" usage="Channel Divinity">
+            <description>Immediately after you cast Divine Smite, you can expend one use of your Channel Divinity and select creatures of your choice within 30 feet of yourself. Until the start of your next turn, these creatures have Advantage on their attack rolls and saving throws against the target of your Divine Smite, and their attacks against the target deal an extra 1d4 Thunder damage.</description>
         </sheet>
     </element>
-    <element name="Level 6: Feat 2" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT2">
-        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT2</requirements>
+    <element name="Level 3: Guardian of the Dead" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_GUARDIAN_OF_THE_DEAD">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_PALADIN_VALHALLA_GUARDIAN_OF_THE_DEAD</requirements>
         <description>
-            <p></p>
+            <p>As a Bonus Action, you can expend one use of your Channel Divinity to better protect the dead under your watch. For 1 hour, whenever you are within 10 feet of a creature reduced to 0 Hit Points, you have Advantage on your attack rolls and on saving throws against spells and effects that inflict the Charmed or Frightened condition. After you gain your Aura of Courage class feature, you have Immunity to the Charmed condition when using this feature.</p>
+            <p class="indent">During this 1-hour period, when a creature you can see casts a spell to create Undead, or restore a creature to life, you can take a Reaction to move up to half your Speed and attack the creature that cast the spell.</p>
         </description>
-        <sheet alt="Feat 2">
-            <description></description>
-        </sheet>
-        <rules>
-            <stat name="crushing-steps:dc" value="8" bonus="base" />
-            <stat name="crushing-steps:dc" value="proficiency" />
-            <stat name="crushing-steps:dc" value="strength:modifier" />
-        </rules>
-    </element>
-    <element name="Level 10: Feat 3" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT3">
-        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT3</requirements>
-        <description>
-            <p></p>
-        </description>
-        <sheet alt="Feat 3">
-            <description></description>
-        </sheet>
-    </element>
-    <element name="Level 14: Feat 4" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_BARD_SKALD_FEAT4">
-        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT4</requirements>
-        <description>
-            <p></p>
-        </description>
-        <sheet alt="Feat 4">
-            <description></description>
+        <sheet alt="Guardian of the Dead" action="Bonus Action" usage="Channel Divinity">
+            <description>As a Bonus Action, you can expend one use of your Channel Divinity to better protect the dead under your watch. For 1 hour, whenever you are within 10 feet of a creature reduced to 0 Hit Points, you have Advantage on your attack rolls and on saving throws against spells and effects that inflict the Charmed or Frightened condition. After you gain your Aura of Courage class feature, you have Immunity to the Charmed condition when using this feature.
+            During this 1-hour period, when a creature you can see casts a spell to create Undead, or restore a creature to life, you can take a Reaction to move up to half your Speed and attack the creature that cast the spell.</description>
         </sheet>
     </element>
     
-    <element name="Feat 1 Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_FEAT1"/>
-    <element name="Feat 2 Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT2"/>
-    <element name="Feat 3 Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT3"/>
-    <element name="Feat 4 Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARD_SKALD_FEAT4"/>
+    <element name="Level 3: Oath Spells" type="Archetype Feature" source="Player’s Handbook" id="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_SPELLS">
+        <description>
+            <p>The magic of your oath ensures you always have certain spells ready; when you reach a Paladin level specified in the Oath of Valhalla Spells table, you thereafter always have the listed spells prepared.</p>
+            <h5 class="caption">OATH OF FREEDOM SPELLS</h5>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Paladin Level</td>
+                        <td>Spells</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>3rd</td>
+                    <td>
+                        <em>Heroism, Searing Smite</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5th</td>
+                    <td>
+                        <em>Gentle Repose, Shining Smite</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9th</td>
+                    <td>
+                        <em>Beacon of Hope, Glyph of Warding (Thunder)</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13th</td>
+                    <td>
+                        <em>Aura of Purity, Guardian of Faith</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>17th</td>
+                    <td>
+                        <em>Flame Strike, Hallow</em>
+                    </td>
+                </tr>
+            </table>
+        </description>
+        <sheet>
+            <description level="5">Glyph of Warding only does thunder damage.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_HEROISM" level="3" spellcasting="Paladin" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SEARING_SMITE" level="3" spellcasting="Paladin" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GENTLE_REPOSE" level="5" spellcasting="Paladin" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHINING_SMITE" level="5" spellcasting="Paladin" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_BEACON_OF_HOPE" level="9" spellcasting="Paladin" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GLYPH_OF_WARDING" level="9" spellcasting="Paladin" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_PURITY" level="13" spellcasting="Paladin" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GUARDIAN_OF_FAITH" level="13" spellcasting="Paladin" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FLAME_STRIKE" level="17" spellcasting="Paladin" prepared="true"/>
+            <grant type="Spell" id="ID_WOTC_PHB24_SPELL_HALLOW" level="17" spellcasting="Paladin" prepared="true"/>
+        </rules>
+    </element>
+    <element name="Level 7: Thuderous Aura" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_THUDEROUS_AURA">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_PALADIN_VALHALLA_THUDEROUS_AURA</requirements>
+        <description>
+            <p>You and your allies have Immunity to Thunder damage while in your Aura of Protection.</p>
+            <p class="indent">Also, when you cast Find Steed, you can choose your Faithful Steed’s attacks to deal Thunder damage instead of its typical damage</p>
+        </description>
+        <sheet alt="Thuderous Aura">
+            <description>You and your allies have Immunity to Thunder damage while in your Aura of Protection.
+            Also, when you cast Find Steed, you can choose your Faithful Steed’s attacks to deal Thunder damage instead of its typical damage</description>
+        </sheet>
+    </element>
+    <element name="Level 15: Valorous Soul" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_VALOROUS_SOUL">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_PALADIN_VALHALLA_VALOROUS_SOUL</requirements>
+        <description>
+            <p>When you reduce a foe to 0 Hit Points with a melee attack, you can choose any number of allies within 60 feet of you. For 1 minute, these allies have Advantage on their attack rolls and saving throws.</p>
+            <p class="indent">Should you die, your body is treated as if Gentle Repose had been cast on it, and if you choose, you can refuse to return to life when you are the target of Raise Dead and similar spells.</p>
+        </description>
+        <sheet alt="Valorous Soul">
+            <description>When you reduce a foe to 0 Hit Points with a melee attack, you can choose any number of allies within 60 feet of you. For 1 minute, these allies have Advantage on their attack rolls and saving throws.
+            Should you die, your body is treated as if Gentle Repose had been cast on it, and if you choose, you can refuse to return to life when you are the target of Raise Dead and similar spells.</description>
+        </sheet>
+    </element>
+    <element name="Level 20: Spirit of the Valkyrie" type="Archetype Feature" source="Northlands (2024)"  id="ID_KP_NL_ARCHETYPE_FEATURE_PALADIN_VALHALLA_SPIRIT_OF_THE_VALKYRIE">
+        <requirements>!ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_PALADIN_VALHALLA_SPIRIT_OF_THE_VALKYRIE</requirements>
+        <description>
+            <p>As a Bonus Action, you receive the blessings granted to Valkyries by Wotan. For 10 minutes or until you choose to end this effect (no action required), you gain the following benefits.</p>
+            <p class="indent"><strong>Flight.</strong> You have a Fly Speed of 60 feet.</p>
+            <p class="indent"><strong>Magic Resistance.</strong> You have Advantage on saving throws against spells and other magical effects.</p>
+            <p class="indent"><strong>Restful Dead.</strong> A creature within your Aura of Protection that attempts to create or summon Undead must make a Charisma saving throw against your spell save DC. On a failed save, the attempt to create or summon Undead fails.</p>
+            <p class="indent"><strong>Thunderstruck.</strong> When you cast a spell with “Smite” in its name, such as Divine Smite or Shining Smite, you can expend any level of spell slot but cast it as though you used a 5th-level spell slot. Additionally, when an enemy starts its turn in your Aura of Protection, it takes Thunder damage equal to your Charisma modifier plus your Proficiency Bonus, and it must make a Constitution saving throw against your spell save DC. On a failed save, it has the Stunned condition until the end of its next turn.</p>
+            <p class="indent">Once you use this feature, you can’t use it again until you finish a Long Rest. You can also restore your use of it by expending a level 5 spell slot (no action required).</p>
+        </description>
+        <sheet alt="Spirit of the Valkyrie" action="Bonus Action" usage="1/Long Rest">
+            <description>As a Bonus Action, you receive the blessings granted to Valkyries by Wotan. For 10 minutes or until you choose to end this effect (no action required), you gain the following benefits.
+            Flight. You have a Fly Speed of 60 feet.
+            Magic Resistance. You have Advantage on saving throws against spells and other magical effects.
+            Restful Dead. A creature within your Aura of Protection that attempts to create or summon Undead must make a Charisma saving throw against your spell save DC. On a failed save, the attempt to create or summon Undead fails.
+            Thunderstruck. When you cast a spell with “Smite” in its name, such as Divine Smite or Shining Smite, you can expend any level of spell slot but cast it as though you used a 5th-level spell slot. Additionally, when an enemy starts its turn in your Aura of Protection, it takes Thunder damage equal to your Charisma modifier plus your Proficiency Bonus, and it must make a Constitution saving throw against your spell save DC. On a failed save, it has the Stunned condition until the end of its next turn.
+            You can also restore your use of it by expending a level 5 spell slot (no action required).</description>
+        </sheet>
+    </element>
+    
+    <element name="Encouraging Smite Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_BARBARIAN_ENCOURAGING_SMITE"/>
+    <element name="Guardian of the Dead Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_PALADIN_VALHALLA_GUARDIAN_OF_THE_DEAD"/>
+    <element name="Oath Spells Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_PALADIN_VALHALLA_SPELLS"/>
+    <element name="Thuderous Aura Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_PALADIN_VALHALLA_THUDEROUS_AURA"/>
+    <element name="Valorous Soul Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_PALADIN_VALHALLA_VALOROUS_SOUL"/>
+    <element name="Spirit of the Valkyrie Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_FEATURE_REPLACEMENT_PALADIN_VALHALLA_SPIRIT_OF_THE_VALKYRIE"/>
 </elements>
