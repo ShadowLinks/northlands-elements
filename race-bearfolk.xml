@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name></name>
+        <update version="0.0.1">
+            <file name="race-bearfolk.xml" url="https://raw.githubusercontent.com/ShadowLinks/northlands-elements/refs/heads/main/race-bearfolk.xml" />
+        </update>
+    </info>
+    <element name="Bearfolk" type="Race" source="Northlands (2024)" id="ID_KP_NL_RACE_BEARFOLK">
+        <description>
+            <p>Hailing from the cold forests and mountains of the Northlands, bearfolk are massive people of iron resolve and deep nobility, who resemble bears that walk upright rather than all fours. They put their trust in family and tribe to stand against the world and the challenges of their homeland. Many outsiders assume that they are some form of beastkin, but bearfolk claim the fey lord Mesikammen elevated them from their bear cousins.</p>
+            <p class="indent">In contrast with their brutish appearance, bearfolk are deeply spiritual and artistic. They lack a bear’s sharp claws, and their hands are as dexterous as any human artisan. They are covered in fur that often has light frosting on the chest, shoulders, and upper back. The color of their fur sometimes gives clues as to a particular bearfolk’s ancestry and what tribe they hail from. As they get older, the fur around their muzzle begins to silver, giving them a distinguished look.</p>
+            <p class="indent">Much as their natural cousins, the natural environment causes minor differences between bearfolk if they inhabit it for generations. Two of these lineages are described below. Bearfolk have similar lifespans to humans.</p>
+            <h4>Andari</h4>
+            <p>You are slighter of build than your cousins, with reddish or pale fur. Your people, who are also known as “purifiers,” tend to have a strong affinity for nature. Andari often serve as spiritual anchors in their communities. They are a recent branch of the bearfolk species. The majority of Andari originate in the settled communities, such as Bjeornheim or in other settlements across the North.</p>
+            <h4>Garhamr</h4>
+            <p>You are thicker and hardier than your cousins. Your people, who are also known as grizzlehides, have fur ranging from black to golden. Tough and ferocious grizzlehides are the original bearfolk stock of the Northlands forests.</p>
+            <h4>Bearfolk Names</h4>
+            <p>Bearfolk are given cub names by their parents, similar to names found throughout the Northlands. When a bearfolk comes of age, they earn a new name, either bestowed upon them by an elder or one they choose themselves. This name befits a deed undertaken during their rite of passage into adulthood, describes some honorable or prominent trait of the bearfolk in question, or honors an ancestor.</p>
+            <p class="indent"><strong>Cub Names:</strong> Anga, Beorst, Burli, Cauldvyr, Cirdhan, Daegna, Dorngal, Durtta, Erlundt, Farla, Gurralt, Hrosvir, Ingyrd, Johanna, Lhod, Nodhr, Padhra, Sivaer, Tuli, Yrn</p>
+            <p class="indent"><strong>Deed Names:</strong> Fireheart, Ironhide, Lightblade, Moondancer, Razorclaws, Shadowbane, Stonebones, Valgerdsdottir, Yellowfang, Yrnsson.</p>
+            <h4>Bearfolk Traits</h4>
+            <p>As an Bearfolk, you have the following racial traits.</p>
+            <p class="indent"><strong><em>Creature Type.</em></strong> Humanoid</p>
+            <p class="indent"><strong><em>Size.</em></strong> Your size is Medium. Bearfolk are typically large and muscular, reaching a height of over 7 feet and weighing anywhere between 250 and 350 pounds.</p>
+            <p class="indent"><strong><em>Speed.</em></strong>  Your base Speed is 30 feet.</p>
+            <p class="indent"><strong><em>Apex Predator.</em></strong> When you make a Charisma check, you can add your Strength or Constitution modifier to it (choose which during character creation). You can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+            <p class="indent"><strong><em>Bearfolk Lineage.</em></strong> You are part of a lineage that grants you supernatural abilities. Choose a legacy from the Bearfolk Lineages table. You gain a different benefit depending on your choice.</p>
+            <p class="indent"><strong><em>Wild Heart.</em></strong> You and allied creatures within 5 feet of you have Advantage on saving throws against the Frightened condition while you are conscious and do not have the Incapacitated condition.</p>
+            <p class="indent"><strong><em>Thick Coat.</em></strong> You have Resistance to Cold damage and Immunity to the effects of extreme cold.</p>
+        </description>
+        <setters>
+            <set name="names" type="name">Anga, Beorst, Burli, Cauldvyr, Cirdhan, Daegna, Dorngal, Durtta, Erlundt, Farla, Gurralt, Hrosvir, Ingyrd, Johanna, Lhod, Nodhr, Padhra, Sivaer, Tuli, Yrn</set>
+            <set name="names" type="deed-name">Fireheart, Ironhide, Lightblade, Moondancer, Razorclaws, Shadowbane, Stonebones, Valgerdsdottir, Yellowfang, Yrnsson</set>
+            <set name="names-format">{{name}} {{deed-name}}</set>
+        </setters>
+        <sheet display="false" />
+        <rules>
+            <grant type="Racial Trait" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_APEX_PREDATOR" />
+            <grant type="Racial Trait" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_LINEAGE" />
+            <grant type="Racial Trait" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_WILD_HEART" />
+            <grant type="Racial Trait" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_THICK_COAT" />
+            <grant type="Size" id="ID_SIZE_MEDIUM"/>
+            <stat name="innate speed" value="30" bonus="base"/>
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE"/>
+            <select type="Language" name="Language (Bearfolk)" supports="Standard" number="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE"/>
+            <select type="Ability Score Improvement" name="Ability Score Improvement Option (Bearfolk)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI"/>
+        </rules>
+    </element>
+    <element name="Apex Predator" type="Racial Trait" source="Northlands (204)" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_APEX_PREDATOR">
+        <requirements>!ID_INTERNAL_KP_NL_RACIAL_TRAIT_REPLACEMENT_BEARFOLK_APEX_PREDATOR</requirements>
+        <description>
+            <p>When you make a Charisma check, you can add your Strength or Constitution modifier to it (choose which during character creation). You can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+        </description>
+        <sheet display="false">
+            <description>When you make a Charisma check, you can add your Strength or Constitution modifier to it (choose which during character creation).</description>
+        </sheet>
+        <rules>
+            <select type="Racial Trait" name="Apex Predator (Bearfolk)" supports="bearfolk-apex-predator" />
+        </rules>
+    </element>
+    <element name="Apex Predator (STR)" type="Racial Trait" source="Northlands (204)" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_APEX_PREDATOR_STR">
+        <supports>bearfolk-apex-predator</supports>
+        <description>
+            <p>When you make a Charisma check, you can add your Strength modifier to it. You can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+        </description>
+        <sheet usage="{{proficiency}}/Long Rest">
+            <description>When you make a Charisma check, you can add your STR modifier {{strength:modifier}} to it.</description>
+        </sheet>
+    </element>
+    <element name="Apex Predator (CON)" type="Racial Trait" source="Northlands (204)" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_APEX_PREDATOR_CON">
+        <supports>bearfolk-apex-predator</supports>
+        <description>
+            <p>When you make a Charisma check, you can add your Constitution modifier to it. You can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+        </description>
+        <sheet usage="{{proficiency}}/Long Rest">
+            <description>When you make a Charisma check, you can add your CON modifier {{constitution:modifier}} to it.</description>
+        </sheet>
+    </element>
+    <element name="Bearfolk Lineage" type="Racial Trait" source="Northlands (204)" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_LINEAGE">
+        <description>
+            <p>Andari <strong>Nature’s Gift.</strong> You know one cantrip of your choice from the Druid spell list. Wisdom is your spellcasting ability score for it</p>
+            <p>Garhamr <strong>Bear Hug.</strong> When you hit a target with an attack roll and deal damage to it, you can make an Unarmed Strike as a Bonus Action. You can use this ability a number of times equal to your Constitution modifier (minimum of 1), and you regain all expended uses when you finish a Long Rest</p>
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <select type="Sub Race" name="Bearfolk Lineage" supports="bearfolk-lineage" />
+        </rules>
+    </element>
+    <element name="Andari" type="Sub Race" source="Northlands (204)" id="ID_KP_NL_SUBRACE_BEARFOLK_ANDARI">
+        <supports>bearfolk-lineage</supports>
+        <description>
+            <p>You are slighter of build than your cousins, with reddish or pale fur. Your people, who are also known as “purifiers,” tend to have a strong affinity for nature. Andari often serve as spiritual anchors in their communities. They are a recent branch of the bearfolk species. The majority of Andari originate in the settled communities, such as Bjeornheim or in other settlements across the North.</p>
+            <p class="indent"><strong>Nature’s Gift.</strong> You know one cantrip of your choice from the Druid spell list. Wisdom is your spellcasting ability score for it.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Racial Trait" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_LINEAGE_ANDARI" />
+        </rules>
+    </element>
+    <element name="Nature's Gift" type="Racial Trait" source="Northlands (204)" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_LINEAGE_ANDARI">
+        <description>
+            <p>You know one cantrip of your choice from the Druid spell list. Wisdom is your spellcasting ability score for it.</p>
+        </description>
+        <sheet>
+            <description>You know one cantrip of your choice from the Druid spell list. Wisdom is your spellcasting ability score for it.</description>
+        </sheet>
+        <rules>
+            <select type="Spell" name="Bearfolk Lineage (Andari)" supports="Druid,0" />
+        </rules>
+    </element>
+    <element name="Garhamr" type="Sub Race" source="Northlands (204)" id="ID_KP_NL_SUBRACE_BEARFOLK_GARHAMR">
+        <supports>bearfolk-lineage</supports>
+        <description>
+            <p>You are thicker and hardier than your cousins. Your people, who are also known as grizzlehides, have fur ranging from black to golden. Tough and ferocious grizzlehides are the original bearfolk stock of the Northlands forests.</p>
+            <p class="indent"><strong>Bear Hug.</strong> When you hit a target with an attack roll and deal damage to it, you can make an Unarmed Strike as a Bonus Action. You can use this ability a number of times equal to your Constitution modifier (minimum of 1), and you regain all expended uses when you finish a Long Rest</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Racial Trait" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_LINEAGE_GARHAMR" />
+        </rules>
+    </element>
+    <element name="Bear Hug" type="Racial Trait" source="Northlands (204)" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_LINEAGE_GARHAMR">
+        <description>
+            <p>When you hit a target with an attack roll and deal damage to it, you can make an Unarmed Strike as a Bonus Action. You can use this ability a number of times equal to your Constitution modifier (minimum of 1), and you regain all expended uses when you finish a Long Rest.</p>
+        </description>
+        <sheet usage="{{constitution:modifier}}/Long Rest" action="Bonus Action">
+            <description>When you hit a target with an attack roll and deal damage to it, you can make an Unarmed Strike as a Bonus Action. </description>
+        </sheet>
+    </element>
+    <element name="Wild Heart" type="Racial Trait" source="Northlands (204)" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_WILD_HEART">
+        <requirements>!ID_INTERNAL_KP_NL_RACIAL_TRAIT_REPLACEMENT_BEARFOLK_WILD_HEART</requirements>
+        <description>
+            <p>You and allied creatures within 5 feet of you have Advantage on saving throws against the Frightened condition while you are conscious and do not have the Incapacitated condition.</p>
+        </description>
+        <sheet>
+            <description>You and allied creatures within 5 feet of you have Advantage on saving throws against the Frightened condition while you are conscious and do not have the Incapacitated condition.</description>
+        </sheet>
+    </element>
+    <element name="Thick Coat" type="Racial Trait" source="Northlands (204)" id="ID_KP_NL_RACIAL_FEATURE_BEARFOLK_THICK_COAT">
+        <requirements>!ID_INTERNAL_KP_NL_RACIAL_TRAIT_REPLACEMENT_BEARFOLK_THICK_COAT</requirements>
+        <description>
+            <p>You have Resistance to Cold damage and Immunity to the effects of extreme cold.</p>
+        </description>
+        <sheet>
+            <description>You have Immunity to the effects of extreme cold.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+        </rules>
+    </element>
+    <element name="Apex Predator Trait Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_RACIAL_TRAIT_REPLACEMENT_BEARFOLK_APEX_PREDATOR"/>
+    <element name="Wild Heart Trait Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_RACIAL_TRAIT_REPLACEMENT_BEARFOLK_WILD_HEART"/>
+    <element name="Thick Coat Trait Replacement" type="Grants" source="Internal" id="ID_INTERNAL_KP_NL_RACIAL_TRAIT_REPLACEMENT_BEARFOLK_THICK_COAT"/>
+</elements>
